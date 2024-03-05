@@ -20,7 +20,7 @@ public class 백준_10814_나이순정렬_3일뒤풀기 {
 		ArrayList<Member> memberList = new ArrayList();
 		String name = new String();
 		int age = 0;
-		
+		int dongs = 27;
 		// Mmeber 클래스에 age, name, i(들어온 순서)를 생성자로 객체 생성 하면서 memberList에  add()
 		for (int i = 0; i < n; i++) {
 			String[] input = br.readLine().split(" ");
