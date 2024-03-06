@@ -1,4 +1,4 @@
-package 백준_브론즈문제;
+package 백준문제_브론즈;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -45,7 +45,7 @@ public class 백준_10814_나이순정렬_3일뒤풀기 {
 		br.close();
 	
 	}
-
+//-- 새로운 내용 추가
 }
 class Member {
 	int age;
