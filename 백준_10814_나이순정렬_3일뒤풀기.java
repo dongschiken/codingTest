@@ -46,6 +46,7 @@ public class 백준_10814_나이순정렬_3일뒤풀기 {
 	
 	}
 //-- 새로운 내용 추가
+	// 새로운 내용 또 추가
 }
 class Member {
 	int age;
