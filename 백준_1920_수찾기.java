@@ -58,7 +58,9 @@ public class 백준_1920_수찾기 {
 		// 여기서 target을 int값으로 계속 생성했는데 시간초과 나서 int[]로 선언
 		for (int i = 0; i < target.length; i++) {
 			target[i] = Integer.parseInt(st2.nextToken());
-			int b = binarySearch(n_arr, target, i);
+			int b = binarySearch(n_arr, target, i); 
+//			int b = Arrays.binarySearch(n_arr, target[i]);
+			
 			bw.write(b + "\n");
 			bw.flush();
 		}
