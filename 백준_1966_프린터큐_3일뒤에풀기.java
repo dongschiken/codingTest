@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class 백준_1966_프린터큐 {
+public class 백준_1966_프린터큐_3일뒤에풀기 {
 
 	public static void main(String[] args) throws IOException, NumberFormatException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
