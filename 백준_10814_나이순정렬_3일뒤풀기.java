@@ -29,9 +29,21 @@ public class 백준_10814_나이순정렬_3일뒤풀기 {
 			age = Integer.parseInt(input[0]);
 			memberList.add( new Member(age, name, i));
 		}
+		
 		// 정렬 작업(람다식으로)
 		Collections.sort(memberList, (m1, m2) -> {
 			if(m1.age == m2.age) {
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
 				return m1.order - m2.order;
 			}
 			return m1.age - m2.age;
@@ -39,6 +51,8 @@ public class 백준_10814_나이순정렬_3일뒤풀기 {
 		for (Member member : memberList) {
 			bw.write(member.age +" "+ member.name+"\n");
 		}
+		
+		
 		
 		bw.flush();
 		bw.close();
