@@ -29,7 +29,5 @@ public class 백준_2501_약수 {
 		}else {
 			System.out.println(0);
 		}
-		
 	}
-
 }
