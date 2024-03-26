@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class 백준_1817_짐챙기는숌 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException , NumberFormatException {
 		
 //		5 100
 //		51 51 51 51 51
@@ -30,7 +30,6 @@ public class 백준_1817_짐챙기는숌 {
 		int temp = 0;
 		for (int j = 0; j < book_weight.length; j++) {
 			temp += book_weight[j];
-			System.out.println( temp );
 			if(temp > box_weight) {
 				temp = 0;
 				count += 2;
