@@ -34,13 +34,7 @@ public class 백준_2292_3일뒤에다시풀기 {
 //			System.out.println(count);
 //		}
 		
-		
-		
-		
-		
-		
-		
-		
+			
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
