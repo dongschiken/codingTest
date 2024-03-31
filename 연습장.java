@@ -1,28 +1,45 @@
 package 백준문제_브론즈;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class 연습장 {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        ArrayList<int[]> balloons = new ArrayList<>();
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 1; i <= N; i++) {
+            balloons.add(new int[]{i, Integer.parseInt(st.nextToken())});
+        }
 
-		
-		Scanner sc = new Scanner(System.in);
-		StringTokenizer st = new StringTokenizer("");
-		st.nextToken();
-		st.hasMoreTokens();
-		
-		StringBuilder sb = new StringBuilder();
-		
-		while (sc.hasNext()) {
-			sb.append(sc.nextLine()+"\n");
-		}
-		
-		sc.close();
-		System.out.println(sb);	
-	}
+        StringBuilder sb = new StringBuilder();
+        int index = 0;
+        for (int i = 0; i < N; i++) {
+            int[] current = balloons.get(index);
+            sb.append(current[0]).append(" ");
+            int move = current[1];
+            balloons.remove(index);
+            System.out.println(balloons);
+            if (balloons.isEmpty()) break;
+
+            
+            if (move > 0) {
+                index = (index + move - 1) % balloons.size();
+            } else {
+                index = (index + move) % balloons.size();
+                if (index < 0) {
+                    index += balloons.size();
+                }
+            }
+        }
+        System.out.println(sb.toString().trim());
+        
+    }
 }
+//10
+//3 2 1 -3 -1 4 -2 -5 5 6
+//1 4 10 8 2 5 3 6 9 7 
