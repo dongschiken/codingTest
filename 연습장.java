@@ -1,43 +1,27 @@
 package 백준문제_브론즈;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class 연습장 {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        ArrayList<int[]> balloons = new ArrayList<>();
-
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 1; i <= N; i++) {
-            balloons.add(new int[]{i, Integer.parseInt(st.nextToken())});
-        }
-
-        StringBuilder sb = new StringBuilder();
-        int index = 0;
-        for (int i = 0; i < N; i++) {
-            int[] current = balloons.get(index);
-            sb.append(current[0]).append(" ");
-            int move = current[1];
-            balloons.remove(index);
-            System.out.println(balloons);
-            if (balloons.isEmpty()) break;
-
-            
-            if (move > 0) {
-                index = (index + move - 1) % balloons.size();
-            } else {
-                index = (index + move) % balloons.size();
-                if (index < 0) {
-                    index += balloons.size();
-                }
-            }
-        }
-        System.out.println(sb.toString().trim());
-        
+    public static void main(String[] args) throws IOException  {
+    	
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	String str = br.readLine();
+    	for (int i = 0; i < str.length(); i += 10) {
+    		if((int)Math.floor(i+10) >= str.length()) {
+    			System.out.println(str.substring(i)); 
+    		}else {
+    			System.out.println(str.substring(i, i+10)); 
+    		}
+		}
+    	
+    	
     }
 }
 //10

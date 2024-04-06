@@ -35,6 +35,7 @@ public class 백준_비밀번호찾기 {
 		bw.flush();
 		bw.close();
 		br.close();
+		
 	}
 
 }
