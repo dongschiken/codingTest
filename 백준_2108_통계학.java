@@ -8,6 +8,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 public class 백준_2108_통계학 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
