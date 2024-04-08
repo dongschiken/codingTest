@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
-public class 연습장 {
+public class 백준_28278_스택2 {
 	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	public static void main(String[] args) throws IOException, NumberFormatException {
@@ -17,15 +17,15 @@ public class 연습장 {
 		
 		int s_count = Integer.parseInt(br.readLine());
 		Stack<Integer> stack = new Stack();
-		//
+		
 		while (s_count > 0) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int command_num = Integer.parseInt(st.nextToken());
-
+			
 			switch (command_num) {
 			case 1: // push연산
 				command_num = Integer.parseInt(st.nextToken());
-				stack.push(command_num);
+				push(stack, command_num);
 				break;
 			case 2: // pop연산
 				if( stack.isEmpty() ) {
@@ -49,7 +49,7 @@ public class 연습장 {
 			
 			s_count--;
 		}
-        bw.flush();
+		bw.flush();
 		bw.close();
 		br.close();
 			
@@ -76,6 +76,8 @@ public class 연습장 {
 		bw.write(stack.size()+"\n");
 	}
 
-
+	private static void push(Stack<Integer> stack, int command_num) throws NumberFormatException, IOException {
+		stack.push(command_num);
+	}
 
 }
